@@ -98,7 +98,7 @@ public class DashboardController {
             List<DashboardChartOptionsResponse> chartOptions = dashboardService.getAllChartOptionsOfDashboard(
                     List.of(lstCharts), List.of(dashboard.getPosition().split(";")), lstMaDuLieu, nhomDuLieus
             );
-            return ResponseEntity.ok(new ExecServiceResponse(new DashboardResponse(dashboard.getId(), dashboard.getLayout(), chartOptions), 1, ""));
+            return ResponseEntity.ok(new ExecServiceResponse(new DashboardResponse(dashboard.getId(), dashboard.getLayout(), dashboard.getName(),  chartOptions), 1, ""));
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.ok(new ExecServiceResponse(new ArrayList<>(), 0, "Xảy ra lỗi khi lấy danh sách biểu đồ"));

@@ -5,11 +5,22 @@ import java.util.List;
 public class DashboardResponse {
     private String dashboardId;
     private String layout;
+    private  String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private List<DashboardChartOptionsResponse> dashboardChartOptionsResponses;
 
-    public DashboardResponse(String dashboardId, String layout, List<DashboardChartOptionsResponse> dashboardChartOptionsResponses) {
+    public DashboardResponse(String dashboardId, String layout, String name,  List<DashboardChartOptionsResponse> dashboardChartOptionsResponses) {
         this.dashboardId = dashboardId;
         this.layout = layout;
+        this.name = name;
         this.dashboardChartOptionsResponses = dashboardChartOptionsResponses;
     }
 

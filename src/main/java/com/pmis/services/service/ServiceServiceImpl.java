@@ -91,6 +91,7 @@ public class ServiceServiceImpl implements ServiceService {
                     dataResult = jdbcTemplate.update(callProcedure + service.get("API_SERVICE_DATA").toString(), parameter);
                     break;
                 case "JSON":
+//                    System.out.println(callProcedure + service.get("API_SERVICE_DATA").toString() + parameter);
                     dataResult = jdbcTemplate.queryForMap(callProcedure + service.get("API_SERVICE_DATA").toString(), parameter);
                     break;
                 case "JSON_LIST":
